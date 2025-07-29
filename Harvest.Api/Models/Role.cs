@@ -10,7 +10,7 @@ namespace Harvest.Api
         public long[] UserIds { get; set; }
     }
 
-    public class RolesResponse
+    public class RolesResponse : PagedList
     {
         public Role[] Roles { get; set; }
     }
