@@ -743,7 +743,7 @@ namespace Harvest.Api
                 .SendAsync<UserDetails>(_httpClient, cancellationToken);
         }
 
-        public async Task<UserDetails> UpdateUser(int userId, string firstName = null, string lastName = null, string email = null,
+        public async Task<UserDetails> UpdateUser(long userId, string firstName = null, string lastName = null, string email = null,
             string telephone = null, string timezone = null, bool? hasAccessToAllFutureProjects = null,
             bool? isContractor = null, bool? isAdmin = null, bool? isProjectManager = null,
             bool? canSeeRates = null, bool? canCreateProjects = null, bool? canCreateInvoices = null,
