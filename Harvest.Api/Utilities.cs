@@ -19,7 +19,7 @@ namespace Harvest.Api
 
         public static string GenerateState()
         {
-            using (var random = new RNGCryptoServiceProvider())
+            using (var random = RandomNumberGenerator.Create())
             {
                 byte[] data = new byte[32];
                 random.GetBytes(data);
