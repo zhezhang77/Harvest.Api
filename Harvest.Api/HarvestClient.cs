@@ -478,8 +478,8 @@ namespace Harvest.Api
         }
 
         public async Task<Project> UpdateProjectAsync(long projectId, long? clientId = null, string name = null, bool? isActive = null, bool? isBillable = null,
-            string billBy = "none", string code = null, bool? isFixedFee = null, decimal? hourlyRate = null, decimal? budget = null,
-            string budgetBy = "none", bool? budgetIsMonthly = null, bool? notifyWhenOverBudget = null, bool? overBudgetNotificationPercentage = null,
+            string billBy = null, string code = null, bool? isFixedFee = null, decimal? hourlyRate = null, decimal? budget = null,
+            string budgetBy = null, bool? budgetIsMonthly = null, bool? notifyWhenOverBudget = null, bool? overBudgetNotificationPercentage = null,
             bool? showBudgetToAll = null, decimal? costBudget = null, bool? costBudgetIncludeExpenses = null,
             decimal? fee = null, string notes = null, DateTime? startsOn = null, DateTime? endsOn = null,
             long? accountId = null, CancellationToken cancellationToken = default)
