@@ -177,7 +177,7 @@ namespace Harvest.Api
                 .SendAsync<AccountsResponse>(_httpClient, cancellationToken);
         }
 
-        public async Task<TimeEntriesResponse> GetTimeEntriesAsync(long? userId = null, long? clientId = null, long? projectId = null, bool? isBilled = null,
+        public async Task<TimeEntriesResponse> GetTimeEntriesAsync(long? userId = null, long? clientId = null, long? projectId = null, long? taskId = null, bool? isBilled = null,
             DateTime? updatedSince = null, DateTime? fromDate = null, DateTime? toDate = null, int? page = null, int? perPage = null, long? accountId = null, CancellationToken cancellationToken = default)
         {
             await RefreshTokenIsNeeded();
@@ -186,6 +186,7 @@ namespace Harvest.Api
                 .Query("user_id", userId)
                 .Query("client_id", clientId)
                 .Query("project_id", projectId)
+                .Query("task_id", taskId)
                 .Query("is_billed", isBilled)
                 .Query("from", fromDate, true)
                 .Query("to", toDate, true)
